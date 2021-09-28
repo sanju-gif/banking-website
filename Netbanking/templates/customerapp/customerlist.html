@@ -1,0 +1,17 @@
+{% if latest_customer_list %}
+<ul>
+    {% for customer in latest_customer_list %}
+    <li>
+        <a href="/customer/{{ customer.id }}">
+                {{ customer.name }}
+        </a>
+        <a href="/customer/{{ customer.id }}/delete_customer/">DELETE</a>
+    </li>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<P> no customer are available</p>
+{% endif %}
+
+<br><br><a href="../"><b>Back</b></a> <br>
